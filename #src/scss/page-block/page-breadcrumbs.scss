@@ -1,0 +1,41 @@
+.breadcrumbs::-webkit-scrollbar {
+	display: none;
+}
+
+.breadcrumbs {
+	overflow-x: scroll;
+	scrollbar-width: none;
+
+	// .breadcrumbs__list
+	&__list {
+		@include flex-align-center;
+		white-space: nowrap;
+		li {
+			&.icon-angle-double-right {
+				@include flex-align-center;
+				&::before {
+					font-size: 1.5rem;
+					padding: 0 1.5rem;
+					color: $hover;
+				}
+			}
+		}
+	}
+
+	// .breadcrumbs__link
+	&__link {
+		position: relative;
+		font-size: 1.4rem;
+		font-weight: 400;
+		text-decoration: underline;
+		color: $hover;
+	}
+
+	// .breadcrumbs__item
+	&__item {
+		font-size: 14px;
+		line-height: 16px;
+		font-weight: 300;
+		color: #999999;
+	}
+}

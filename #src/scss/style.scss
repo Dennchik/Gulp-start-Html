@@ -1,0 +1,47 @@
+@import 'mixins';
+@import 'fonts';
+@import 'variables';
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	width: 100vw;
+	min-height: 100vh;
+	margin: 0 auto;
+	border: 1px groove;
+}
+
+[class^='grid-'] {
+	display: grid;
+	place-self: center;
+}
+
+[class*='_grid-container'] {
+	display: grid;
+	grid-template-columns: auto auto auto;
+}
+
+[class*='_container'] {
+	box-sizing: content-box;
+	max-width: $maxWidthContainer;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+[class*='_wrap-container'] {
+	max-width: $maxWidth;
+	margin: 0 auto;
+}
+
+[class*='_stretch'] {
+	position: relative;
+	z-index: 0;
+	min-height: calc(100vh - ($headerHeight + $footerHeight));
+	border: 1px solid #3537c5;
+}
+// -----------------------------------------------------------------------------
+@import 'reset';
+@import url('https://fonts.googleapis.com/css?family=Play:regular,700&display=swap&subset=cyrillic-ext');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,regular,500,700,900&display=swap&subset=cyrillic-ext');
+@import 'bem-block/main';
+@import 'bem-block/news';

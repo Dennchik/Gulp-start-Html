@@ -1,0 +1,106 @@
+.text-block {
+	// .text-block__container
+	&__container {
+		background: url('../img/main/bg_fon_text.jpg') center / cover no-repeat;
+	}
+
+	// .text-block__body
+	&__body {
+		padding: 46px 22px 62px;
+	}
+
+	// .text-block__title
+	&__title {
+		margin-bottom: 33px;
+		font: {
+			family: 'UniSansHeavyCaps';
+			size: 30px;
+			weight: 900;
+		}
+		line-height: 1.2;
+		text-transform: uppercase;
+		letter-spacing: 0.025em;
+		color: #22b7ca;
+	}
+
+	// .text-block__row
+	&__row {
+		margin: 0 -30px;
+		display: flex;
+		@include _992 {
+			flex-wrap: wrap;
+		}
+	}
+
+	// .text-block__column
+	&__column {
+		user-select: text;
+		margin: 0 30px;
+		flex: 0 1 50%;
+		font: {
+			family: Roboto;
+		}
+		line-height: 20px;
+		letter-spacing: 0.025em;
+
+		@include _992 {
+			flex: 0 1 100%;
+			&:not(:last-child) {
+				margin-bottom: 30px;
+			}
+		}
+		p {
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+		h2 {
+			font-weight: 900;
+			text-transform: uppercase;
+		}
+	}
+
+	// .text-block__list
+	&__list {
+		position: relative;
+		li {
+			&:not(:last-child) {
+				margin-bottom: 5px;
+			}
+
+			span {
+				display: inline-block;
+				width: 10px;
+				height: 10px;
+				color: #48d6e9;
+				margin-right: 10px;
+			}
+		}
+	}
+
+	// .text-block__image
+	&__image {
+		@include _992 {
+			display: none;
+		}
+	}
+
+	&__float {
+		position: absolute;
+		img {
+			position: relative;
+			right: -40px;
+			shape-outside: polygon(
+				70.76% 0px,
+				100% 0px,
+				100% 100%,
+				0px 100%,
+				33px 38.58%
+			);
+			float: right;
+			width: 263px;
+			height: 330px;
+			background: url('../img/main/sloy.png') -10px no-repeat;
+		}
+	}
+}

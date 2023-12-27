@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('../layouts/head.html', {
+"title": "Gaulp-Start-V-1"
+})
+
+<body>
+	@@include("../partials/loading.html")
+	<div class="wrapper ">
+		@@include("../partials/header.html")
+
+		<div class="main _container">
+			<h1 class="title">Главная!!!!!!</h1>
+			<a href="@@webRoot/fd_css/index.html">INDEX</a>
+			@@loop('../page-blocks/news-item.html', "../../data/news.json")
+		</div>
+		<div class="footer">
+			@@include("../partials/footer.html")
+		</div>
+	</div>
+</body>
+
+</html>

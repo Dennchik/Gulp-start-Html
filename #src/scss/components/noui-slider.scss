@@ -1,0 +1,100 @@
+// * Style for noUiSlider
+// * Укажите исходные данные - height/width: 0, чтобы они не мешали нажатию на - "connect elements".
+.noUi-connects,
+.noUi-base {
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+}
+.noUi-connect,
+.noUi-origin {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	transform-origin: 0 0;
+	will-change: transform;
+	transform-style: flat;
+}
+
+//* Размер ползунка  и его место расположения (The size of the slider and its location;);
+.noUi-handle {
+	position: absolute;
+	top: -10px;
+	right: -12px;
+	width: 24px;
+	height: 24px;
+	cursor: grab;
+	border: 1px solid #f68038;
+	border-radius: 50%;
+	background-color: #fff;
+	backface-visibility: hidden;
+}
+.noUi-touch-area {
+	width: 15px;
+	height: 15px;
+	transition: 0.25s linear;
+	transform: translate(25%, 25%);
+	border-radius: 50%;
+	background-color: #f68038;
+}
+
+.noUi-active {
+	cursor: grabbing;
+	border: 1px solid rgba(6, 130, 147, 0.568);
+
+	.noUi-touch-area {
+		background-color: #068292;
+		box-shadow:
+			inset 0 0 1px #068292,
+			inset 0 1px 7px #068292,
+			0 3px 6px -3px #068292;
+	}
+}
+
+// * Оболочка для всех соединительных элементов (connect elements)
+//* Wrapper for all connect elements.
+.noUi-draggable {
+	cursor: ew-resize;
+}
+
+.noUi-connect {
+	background: #f68038;
+}
+.noUi-tooltip {
+	display: none;
+	font: {
+		size: 12px;
+		weight: 400;
+	}
+	line-height: 30px;
+	position: absolute;
+	bottom: -35px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	text-align: center;
+	white-space: nowrap;
+	color: #999;
+	background: #fff;
+}
+.noUi-active {
+	.noUi-tooltip {
+		display: block;
+	}
+}
+
+.noUi-vertical {
+	.noUi-origin {
+		top: -100%;
+		width: 0;
+	}
+}
+
+.noUi-horizontal {
+	.noUi-origin {
+		height: 0;
+	}
+}

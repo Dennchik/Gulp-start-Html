@@ -1,0 +1,110 @@
+.page {
+	width: 100%;
+
+	// .page__container
+	&__container {
+		margin: 5px auto 20px;
+	}
+
+	// .page__content
+	&__content {
+		@include _min-920 {
+			display: flex;
+		}
+	}
+
+	// .page__sidebar
+	&__sidebar {
+		height: auto;
+		@include _min-920 {
+			flex: 0 0 260px;
+		}
+	}
+
+	// .page__menu
+	&__menu {
+		position: relative;
+		min-width: 260px;
+		margin-bottom: 15px;
+
+		@include _min-920 {
+			margin-bottom: 30px;
+			display: inline-block;
+		}
+	}
+
+	//  .page__main-content
+	&__main-content {
+		@include _min-920 {
+			flex: 1 1 auto;
+			min-width: 0;
+			max-height: 100%;
+			padding-left: 20px;
+		}
+	}
+
+	// .page__search
+	&__search {
+		position: relative;
+		margin-bottom: 20px;
+		@include _920 {
+			margin-bottom: 15px;
+		}
+
+		&._open {
+			.search-page__select {
+				&:after {
+					transform: rotate(0deg);
+				}
+				i {
+					&:last-child {
+						transform: rotate(180deg);
+					}
+				}
+			}
+		}
+	}
+
+	//  .page__slide
+	&__slide {
+		@include _min-920 {
+			margin-bottom: 55px;
+		}
+
+		@include _920-1170 {
+			margin-bottom: calc(32px + (55 - 32) * ((100vw - 920px) / (1170 - 920)));
+		}
+		@include _920 {
+			margin-bottom: calc(15px + (32 - 15) * ((100vw - 320px) / (920 - 320)));
+		}
+	}
+
+	// .page__brands
+	&__brands {
+		margin-bottom: 35px;
+	}
+
+	// .page__text
+	&__text {
+		margin-bottom: 35px;
+	}
+
+	// .page__info
+	&__info {
+		border-top: 1px dashed #dadada;
+		border-bottom: 1px dashed #dadada;
+		margin-bottom: 15px;
+
+		@include _min-920 {
+			margin-bottom: 30px;
+		}
+	}
+
+	// page__filter
+	&__filter {
+		margin-bottom: 20px;
+		@include _920 {
+			margin-bottom: 15px;
+		}
+	}
+}
