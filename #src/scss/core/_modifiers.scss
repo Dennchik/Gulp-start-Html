@@ -1,0 +1,67 @@
+@include _min-920 {
+	.tooltips {
+		position: relative;
+
+		&::after {
+			content: attr(data-title);
+			border-radius: 0.6rem;
+			border: 1px dashed $blue-light;
+			background-color: #23343bde;
+			position: absolute;
+			top: 25%;
+			left: 90%;
+			padding: 1.2rem;
+			color: $blue-light;
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.4s ease-in-out;
+
+			font: {
+				family: $font-family-title;
+				weight: 200;
+				size: 1.3rem;
+			}
+			letter-spacing: 0.2em;
+			text-transform: uppercase;
+			z-index: 9;
+			white-space: nowrap;
+		}
+		&::before {
+			content: '';
+			border: 9px solid transparent;
+			border-right: 9px dashed $blue-light;
+			position: absolute;
+			z-index: 9;
+			left: 90%;
+			margin-left: -20px;
+			bottom: 12%;
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.4s ease-in-out;
+		}
+
+		&:hover {
+			&::after {
+				visibility: visible;
+				opacity: 1;
+			}
+			&::before {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.breadcrumb {
+	a:after {
+		content: '';
+		border-top: 12px solid transparent;
+		border-bottom: 12px solid transparent;
+		border-left: 12px solid #e7e9eb;
+		position: absolute;
+		right: -12px;
+		top: 0;
+		z-index: 1;
+	}
+}

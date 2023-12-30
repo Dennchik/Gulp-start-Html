@@ -1,0 +1,35 @@
+.grad_underline {
+	background: linear-gradient(to right, transparent, transparent),
+		linear-gradient(to right, $orange, $blue-light);
+	background-size:
+		100% 1px,
+		0 1px;
+	background-position:
+		100% 100%,
+		0 100%;
+	background-repeat: no-repeat;
+	transition: background-size 400ms;
+
+	&._opened-menu {
+		background-size:
+			0 1px,
+			calc(100% - 3rem) 1px;
+	}
+}
+.gradient-box {
+	background:
+		linear-gradient(to right, #0b486bbd, #0b486b, #0b486bbd),
+		url('../img/header/bggrid.png') center / 100% 100% no-repeat;
+}
+.gradient-top-link {
+	text-shadow: $orange 1px 0 10px;
+	background: linear-gradient(to bottom, #008192, #90effc, #008192 100%);
+	color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.gradient {
+	background: linear-gradient(to left, #0b486bbd, #0b486b77, #0b486bbd);
+}

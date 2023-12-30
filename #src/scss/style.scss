@@ -1,47 +1,66 @@
-@import 'mixins';
-@import 'fonts';
-@import 'variables';
+// todo -------------------------- Variables -----------------------------------
+@import 'core/variables';
+@import 'core/variables-icon';
+// todo --------------------------- Mixins -------------------------------------
+@import 'core/mixins';
+@import 'core/extend';
+//todo ---------------------------- Core ---------------------------------------
+@import 'core/modifiers';
+//todo ------------------------- Default fonts ---------------------------------
+// &display=swap&subset=cyrillic-ext
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,regular,400,500,700&display=swap&subset=cyrillic-ext);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,300,regular,500,600,700,800,900&display=swap&subset=cyrillic-ext);
+// todo --------------------------- Fonts --------------------------------------
+@import 'core/fonts';
+//todo  ------------------------ Icon Fonts ------------------------------------
+@import 'core/iconfonts';
+// todo ------------------------ Reset code ------------------------------------
+@import 'core/reset';
+// todo ---------------------------- Ui ----------------------------------------
+@import 'core/ui';
+
+// todo -------------------------- Plugins -------------------------------------
+// @import 'components/swiper'
+// todo -------------------------- Classes -------------------------------------
+// #region
 .wrapper {
 	display: flex;
 	flex-direction: column;
-	overflow: hidden;
-	width: 100vw;
 	min-height: 100vh;
 	margin: 0 auto;
-	border: 1px groove;
-}
-
-[class^='grid-'] {
-	display: grid;
-	place-self: center;
-}
-
-[class*='_grid-container'] {
-	display: grid;
-	grid-template-columns: auto auto auto;
 }
 
 [class*='_container'] {
+	/* border: groove; */
 	box-sizing: content-box;
 	max-width: $maxWidthContainer;
+	height: 100%;
 	margin: 0 auto;
 	padding: 0 15px;
 }
 
-[class*='_wrap-container'] {
-	max-width: $maxWidth;
-	margin: 0 auto;
+[class*='grid-'] {
+	display: grid;
+}
+
+[class*='icon-'] {
+	display: flex;
 }
 
 [class*='_stretch'] {
 	position: relative;
 	z-index: 0;
-	min-height: calc(100vh - ($headerHeight + $footerHeight));
-	border: 1px solid #3537c5;
+	// min-height: calc(100vh - ($headerHeight + $footerHeight));
 }
-// -----------------------------------------------------------------------------
-@import 'reset';
-@import url('https://fonts.googleapis.com/css?family=Play:regular,700&display=swap&subset=cyrillic-ext');
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,regular,500,700,900&display=swap&subset=cyrillic-ext');
-@import 'bem-block/main';
-@import 'bem-block/news';
+
+// todo --------------------------- Components ---------------------------------
+@import 'components/bem-block';
+@import 'components/burger-bottom';
+// todo --------------------------- layout -------------------------------------
+@import 'layout/header';
+@import 'layout/footer';
+// todo --------------------------- Pages --------------------------------------
+@import 'pages/page';
+// todo -------------------------- Sections ------------------------------------
+@import 'section/news';
+@import 'section/main';

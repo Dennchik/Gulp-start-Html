@@ -1,0 +1,26 @@
+.page__left-side,
+.sidebar-left {
+	width: var(--sidebar-width);
+	min-width: var(--sidebar-width);
+	max-width: var(--mob-expanded-width);
+}
+
+.page {
+
+	//.page__grid-content
+	&__content {
+		display: flex;
+		width: 100%;
+		min-height: 100%;
+	}
+
+	// .page__main-content
+	&__main-content {
+		flex: 1;
+		margin: 1.5rem;
+
+		@include _320 {
+			margin: 1.5rem 0.5rem;
+		}
+	}
+}

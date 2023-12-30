@@ -5,7 +5,7 @@
 	align-content: space-between;
 	background-color: rgba(86, 86, 148, 0.38);
 	grid-template-columns: auto auto auto auto;
-	@include _760 {
+	@include _768 {
 		display: block;
 		color: red;
 		font-family: "Montserrat", serif;

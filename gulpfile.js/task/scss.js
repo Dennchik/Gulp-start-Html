@@ -1,5 +1,4 @@
-//* Плагины
-//* Обработка scss
+//* JavaScript Processing
 const scss = () => {
 	return $.gulp.src($.path.scss.src)
 		.pipe($.gul.plumber({
@@ -27,14 +26,14 @@ const scss = () => {
 		.pipe($.gulpIf($.app.isProd, $.gul.shorthand()))
 		.pipe($.gulpIf($.app.isProd, $.gul.webpCss()))
 		.pipe($.gulp.dest($.path.scss.dest))
-		.pipe($.gulpIf($.app.isProd, $.gul.size({
+		.pipe($.gul.size({
 			title: 'До сжатия - (CSS):'
-		})))
+		}))
 		.pipe($.gul.csso('style.css'))
-		.pipe($.gulpIf($.app.isProd, $.gul.rename($.app.renameScss)))
-		.pipe($.gulpIf($.app.isProd, $.gul.size({
+		.pipe($.gul.rename($.app.renameScss))
+		.pipe($.gul.size({
 			title: 'После сжатия - (CSS):'
-		})))
+		}))
 		.pipe($.gulpIf($.app.isDev, $.gul.sourcemaps.write('.')))
 		.pipe($.gulpIf($.app.isDev, $.gul.debug({
 			title: 'Source - Maps (WRITE)'

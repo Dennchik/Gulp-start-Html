@@ -2,7 +2,9 @@ const recompress = require('imagemin-jpeg-recompress');
 const pngquant = require('imagemin-pngquant');
 const isProd = process.argv.includes('--production');
 const isDev = !isProd;
+const MergeIntoSingleFilePlugin = require('webpack-merge-and-include-globally');
 
+const path = require('path');
 module.exports = {
 	isProd: isProd,
 	isDev: isDev,
@@ -12,6 +14,24 @@ module.exports = {
 	},
 	webpack: {
 		mode: isProd ? 'production' : 'development',
+		entry: {
+			main: './#src/js/main.js',
+			app: './#src/js/app.js'
+		},
+		output: {
+			filename: '[name].js'
+		},
+		devServer: {
+			overlay: true
+		},
+		module: {
+			rules: [
+				{
+					test: /\.css$/,
+					use: ['style-loaader', 'css-loader']
+				}
+			]
+		}
 	},
 	fonter: {
 		formats: ['woff', 'ttf', 'eot', 'svg'],
@@ -26,10 +46,10 @@ module.exports = {
 		extname: '.css',
 		suffix: '.min',
 	},
-	renameJs: {
-		extname: '.js',
-		suffix: '.min',
-	},
+	// renameJs: {
+	// 	extname: '.js',
+	// 	suffix: '.min',
+	// },
 	autoprefixer: {
 		cascade: false,
 		grid: 'auto-place',

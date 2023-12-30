@@ -1,0 +1,64 @@
+//* ------------------------------- [Variables] --------------------------------
+$minWidth: 320px;
+$maxWidth: 1920px;
+$maxWidthContainer: 1440px;
+$headerHeight: 9rem;
+//* ---------------------------- [Font Variables] ------------------------------
+$font-path: '../fonts';
+$font-defoult: 'Georgia', sans-serif;
+$font-family-title: 'Roboto Slab', sans-serif;
+$font-family-defoult: 'Segoe UI', sans-serif;
+$font-family-secondary: 'Systemia Regular', sans-serif;
+$font-body-color: #041925;
+$font-color-defoult: #06293d;
+$font-weight-defoult: 470;
+$font-size-defoult: 1.6rem;
+//* -------------------------------- [Color] -----------------------------------
+$body-color: #041925;
+$background-color: #002f5a;
+$themes-color: #0b486b;
+$background-menu: #0f1317;
+$background-thumb: #0f1317;
+//* ---------------------------- [Other colors] --------------------------------
+$nav-link-color: #9bceb4;
+$blue-light: #8ff2ff;
+$colorSideText: #9bceb4;
+$brown: #584e4a;
+$orange: #f64e38;
+$darkcyan: darkcyan;
+$gray: #999;
+// -----------------------------------------------------------------------------
+$background-transparent: #002f5a9c;
+$background-color-second: #cff09e;
+$border-color: #4e4e4f;
+// -----------------------------------------------------------------------------
+$boxShadow: 0px 3px 10px #03141a9c;
+$boxShadowSecond: 0px 25px 25px rgba(13, 8, 8, 0.9333333333);
+$BlackShadow: #000;
+// -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+$text-title: #8ff2ff;
+$text-selection: #0054633f;
+$text-color-selection: #9b9999;
+$scrollbar-thumb-bgcolor: #07325a8a;
+
+// -----------------------------------------------------------------------------
+:root {
+	--pos: left center;
+	--size: 0;
+	--inset-top: 0;
+	--inset-right: 100%;
+	--inset-bottom: 100%;
+	--inset-left: 0;
+	// ---------------------------------------------------------------------------
+	--stripe-width: 10px;
+	--nav-marker-border: #3b8686;
+	--sidebar-width: 28.5rem;
+	--duration: 0.3s;
+	--button-size: 4rem;
+	--mob-expanded-width: 320px;
+	--mob-collapsed-width: 4rem;
+}
+
+$snap: cubic-bezier(1, 0.005, 0.24, 1);
+$bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
