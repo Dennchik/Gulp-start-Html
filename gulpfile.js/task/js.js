@@ -7,10 +7,8 @@ const js = () => {
 				message: error.message
 			}))
 		}))
-		// .pipe($.gul.fileInclude())
 		// .pipe($.gul.babel())
 		.pipe($.webpack($.app.webpack))
-
 		// .pipe($.webpack(require('../../webpack.config')))
 		.pipe($.gulp.dest($.path.js.dest))
 		.pipe($.gulpIf($.app.isDev, $.gul.sourcemaps.init({
@@ -23,7 +21,7 @@ const js = () => {
 
 		// .pipe($.gul.uglify())
 		// .pipe($.gul.rename($.app.renameJs))
-		.pipe($.gul.minify($.app.minJs))
+		// .pipe($.gul.minify($.app.minJs))
 		.pipe($.gulpIf($.app.isProd, $.gul.size({
 			title: 'После сжатия - (JavaScript):'
 		})))

@@ -88,6 +88,7 @@
 		"webpack-stream": "^7.0.0"
 	},
 	"dependencies": {
+		"animejs": "^3.2.2",
 		"D": "^1.0.0",
 		"del": "^6.1.1",
 		"postcss": "^8.4.32"

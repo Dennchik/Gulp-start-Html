@@ -13,8 +13,10 @@ module.exports = {
 		collapseWhitespace: isProd,
 	},
 	webpack: {
-		mode: isProd ? 'production' : 'development',
+		// mode: isProd ? 'production' : 'development',
+		mode: 'production',
 		entry: {
+			anime: './#src/js/anime.js',
 			main: './#src/js/main.js',
 			app: './#src/js/app.js'
 		},

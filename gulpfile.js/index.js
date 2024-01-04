@@ -7,6 +7,7 @@ global.$ = {
 	gulpIf: require('gulp-if'),
 	del: require('del'),
 	sass: require('gulp-sass')(require('sass')),
+	anime: require('animejs'),
 	//* Configuration
 	path: require('./config/path'),
 	app: require('./config/app'),
